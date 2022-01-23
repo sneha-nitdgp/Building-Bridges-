@@ -27,4 +27,4 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-app.listen(5000)
+app.listen(process.env.PORT || 5000)
