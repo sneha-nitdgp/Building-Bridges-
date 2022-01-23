@@ -1,5 +1,5 @@
 <div class="form-group">
-  <label for="title">Class Title</label>
+  <label for="title"> Mentor's Name</label>
   <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
 </div>
 <div class="form-group">
@@ -13,13 +13,13 @@
    <textarea name="targetAudience" id="targetAudience" class="targetAudience"><%= article.targetAudience %></textarea>
 </div> 
 <div class="form-group">
-  <label for="description">Description</label>
+  <label for="description">class Subject</label>
   <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>
 </div>
 <div class="form-group">
-  <label for="markdown">Markdown</label>
+  <label for="markdown">description</label>
   <textarea required name="markdown" id="markdown" class="form-control"><%= article.markdown %></textarea>
 </div>
 
-<a href="/" class="btn btn-secondary">Cancel</a>
+<a href="/blog" class="btn btn-secondary">Cancel</a>
 <button type="submit" class="btn btn-primary">Save</button>
