@@ -1,7 +1,17 @@
 <div class="form-group">
-  <label for="title">Title</label>
+  <label for="title">Class Title</label>
   <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
 </div>
+<div class="form-group">
+  <label for="targetAudience">Who is this intended for?</label><br/>
+   <!-- <input type="radio" id="Women" name="fav_language" value="Women">
+   <label for="html">Women</label><br>
+   <input type="radio" id="Rural People" name="fav_language" value="Rural People">
+   <label for="Rural People">Rural People</label><br>
+   <input type="radio" id="Disabled" name="fav_language" value="Disabled">
+   <label for="Disabled">Disabled</label> -->
+   <textarea name="targetAudience" id="targetAudience" class="targetAudience"><%= article.targetAudience %></textarea>
+</div> 
 <div class="form-group">
   <label for="description">Description</label>
   <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>

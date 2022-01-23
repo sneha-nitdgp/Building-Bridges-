@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="assets/css/style2.css" rel="stylesheet" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css" media="screen">
+    body {
+     background: url("../../assets/img/class.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+ }
+ </style>
   <title>Blog</title>
 </head>
 <body>
@@ -13,7 +22,8 @@
     <div class="text-muted mb-2">
       <%= article.createdAt.toLocaleDateString() %>
     </div>
-    <a href="/" class="btn btn-secondary">All Articles</a>
+    <a href="/" class="btn btn-secondary">All classes</a>
+    <a href="/" class="btn btn-secondary"><%= article.targetAudience %></a>
     <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
 
     <div>

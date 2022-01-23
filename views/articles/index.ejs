@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="assets/css/style2.css" rel="stylesheet" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Blog</title>
+  <title>Meet our Mentors</title>
 </head>
 <body>
   <div class="container">
-    <h1 class="mb-4">Blog Articles</h1>
-    <a href="/articles/new" class="btn btn-success">New Article</a>
+    <h1 class="mb-4">Add a class</h1>
+    <a href="/articles/new" class="btn btn-success">New Class</a>
 
     <% articles.forEach(article => { %>
       <div class="card mt-4">
@@ -20,8 +21,10 @@
             <%= article.createdAt.toLocaleDateString() %>
           </div>
           <div class="card-text mb-2"><%= article.description %></div>
+          <div class="card-text mb-2"><%= article.targetAudience %></div>
           <a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
           <a href="articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+          <a href="https://bear-a-hand-videoapp.herokuapp.com/" class="btn btn-info">Go to Class</a>
           <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
             <button type="submit" class="btn btn-danger">Delete</button>
           </form>
